@@ -12,25 +12,27 @@
         <h1>Tic-Tac-Toe</h1>
     </header>
     <main>
-        <section class="turn-container">
-            <h3>Turn For <span class="turn-indicator player-x">X</span></h3>
+        <section class="game-info">
+            <h2>Player vs Player</h2>
+            <section class="game-progress">
+                <h3><span class="progress-display">Turn For </span><span class="turn-indicator playerX">X</span></h3>
+            </section>
         </section>
-        <section class="game-grid">
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
+        <section class="game-grid" id="game-container">
         </section>
-        <section class="game-result">
-
-        </section>
-        <section class="game-control">
-            <button id="reset-game">Reset</button>
+        <section class="game-menu">
+            <section class="boardSize">
+                <select name="boardSizeSelect" id="boardSizeSelect">
+                    <option value="3">3x3</option>
+                    <option value="4">4x4</option>
+                </select>
+                <button id="applyBoardSize" onclick="changeBoard()">Change Size</button>
+            </section>
+            <section>
+                <button id="reset-game" onclick="resetBoard()">Reset Board</button>
+                <button id="quit-game" onclick="resetBoard()">Quit</button>
+            </section>
+            
         </section>
 
     </main>
