@@ -1,0 +1,7 @@
+services:
+  client:
+    image: nginx
+    ports:
+      - 2999:80
+    volumes:
+      - ./tic-tac-toe:/usr/share/nginx/html
